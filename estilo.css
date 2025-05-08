@@ -23,12 +23,13 @@ html, body{
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
-    
+    transition: all .3s ease-in-out;
+    cursor: pointer;
     
 }
 
 .botao:hover {
-    background-color: #B388EB; /* Tom mais escuro ao passar o mouse */
+    background-color: #251041; /* Tom mais escuro ao passar o mouse */
     transform: scale(1.05);
 }
 
@@ -38,6 +39,7 @@ header{
     text-align: center;
     width: 100%;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     
 
 }
@@ -60,6 +62,8 @@ footer{
     text-align: center;
     padding: 20px;
     width: 100%;
+    
+    
   }
 
 .container{
@@ -70,10 +74,11 @@ footer{
     padding: 20px;
 }
 .minha-imagem{
-    width: 180px;
+    width: 222px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 33px;
     padding: 20px;
+   
 
 }
 .contato{
@@ -98,4 +103,68 @@ footer{
 .sobrenos{
     text-align: center;
     flex:1
+}
+
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    margin-top: 20px;
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    max-width: 80%; /* Limita a largura do texto para não esticar demais */
+    line-height: 1.6; /* Ajuste para melhorar a legibilidade */
+}
+
+.gerar-imagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gerar-imagem form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gerar-imagem form button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    font-family:'Poppins', sans-serif;
+    width: 5rem;
+    box-shadow: 0 4px 8px rgba(135, 102, 255, 0.3);
+}
+
+.gerar-imagem form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.gerar-imagem form input {
+    padding: 10px;
+    width: 50%;
+    height: 55px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(93, 91, 197, 0.3);
+}
+
+.gerar-titulo {
+    margin-top: 1rem;
+}
+
+.gerar-titulo h1 {
+    font-size: 1.8rem;
+    margin: 20px;
+}
+.descreva{
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
 }
