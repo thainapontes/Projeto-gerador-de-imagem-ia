@@ -5,18 +5,55 @@
     box-sizing: border-box;
 }
 
-html, body{  
+html,body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color:#0A0F2C;
-    ;
+    background: linear-gradient(135deg, #29294e, #404058);
 
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+    color: #F0F0F0;
+    font-family: 'Poppins', sans-serif;
 
 }
 
 
-.botao{
+/*                                      HOMEPAGE                                   */
+
+.home {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* <- isso aqui é o que resolve */
+    align-items: center; /* centraliza na horizontal */
+    margin: 2rem;
+    gap: 1rem; /* espaço entre os textos */
+    padding: 0 2rem; /* para não grudar nas bordas */
+    text-align: center;
+    
+
+}
+
+.home-background{
+    background-image: url('https://www.gruposelpe.com.br/wp-content/uploads/2021/02/gente-e-gestao-digital-o-futuro-ja-chegou.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*                              CABEÇALHO                                  */
+
+
+
+
+.botao {
     font-size: 22px;
     color: #F0F0F0;
     padding: 20px 35px;
@@ -25,74 +62,128 @@ html, body{
     font-family: 'Orbitron', sans-serif;
     transition: all .3s ease-in-out;
     cursor: pointer;
-    
+
 }
 
 .botao:hover {
-    background-color: #251041; /* Tom mais escuro ao passar o mouse */
+    background-color: #251041;
+    /* Tom mais escuro ao passar o mouse */
     transform: scale(1.05);
 }
 
-header{
-    background-color:#1F2A44;
+header {
+    background-color: #1F2A44;
     padding: 20px 20px;
     text-align: center;
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    
+
 
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-h1,h2,h3,h4{
-    text-align: center;
-    color: #F0F0F0;
-    font-family: 'Poppins', sans-serif;
-    
-}
 
-footer{
-    background-color: #1F2A44;
+
+
+
+/*                             RODAPE                          */
+footer {
+    background-color: #1a2338;
     color: #B0B0B0;
     text-align: center;
     padding: 20px;
     width: 100%;
-    
-    
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
-.container{
+
+}
+
+
+
+
+
+
+/*                                    CONTATO                                */
+
+
+
+.contato {
     flex: 1;
-    display: flex;
-    justify-content: center;   /* alinha no eixo horizontal */
-    align-items: center;       /* alinha no eixo vertical */
     padding: 20px;
 }
-.minha-imagem{
-    width: 222px;
-    height: auto;
-    border-radius: 33px;
-    padding: 20px;
+
+.contato h1{
+    margin: 2rem;
+    
+}
+
+.contato h3{
+    margin: 2rem;
+    
+}
+.contato h2{
+    margin: 0.4rem;
+}
+
+.contato form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Para não quebrar em telas pequenas */
+}
+
+
+.contato  form input{
+    padding: 10px;
+    width: 50%;
+    height: 55px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(93, 91, 197, 0.3);
+  
+
+}
+   
    
 
+.contato  form button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    width: 5rem;
+    box-shadow: 0 4px 8px rgba(135, 102, 255, 0.3);
 }
-.contato{
-    flex:1;
-    padding: 20px;
-}
-.gerar-imagem{
-    font-size: 15px;
-    flex:1;
-    padding: 20px; /* desgruda o conteúdo da borda, assim fica mais bonito*/
-    
+.contato form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-.galeria{
+
+
+
+/*                                   GERAR IMAGEM                             */
+
+
+
+
+.gerar-imagem {
+    font-size: 15px;
+    flex: 1;
+    padding: 20px;
+    /* desgruda o conteúdo da borda, assim fica mais bonito*/
+
+}
+
+.galeria {
     color: #F0F0F0;
     flex: 1;
     font-family: 'Poppins', sans-serif;
@@ -100,21 +191,61 @@ footer{
     text-align: center;
 }
 
-.sobrenos{
+
+
+/*                                    SOBRE NOS                                  */
+
+
+
+
+.sobrenos {
     text-align: center;
-    flex:1
+    flex: 1;
+    margin: 2rem;
+    
 }
 
-.perfil{
+.quemsomos{
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    
+
+}
+.quemsomos h1{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+}
+
+.perfil {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    gap: 20px; /* Espaço entre a imagem e o texto */
+    gap: 20px;
+    /* Espaço entre a imagem e o texto */
     margin-top: 20px;
-    font-size: 16px; /* Ajusta o tamanho do texto */
-    max-width: 80%; /* Limita a largura do texto para não esticar demais */
-    line-height: 1.6; /* Ajuste para melhorar a legibilidade */
+    font-size: 16px;
+    /* Ajusta o tamanho do texto */
+    max-width: 80%;
+    /* Limita a largura do texto para não esticar demais */
+    line-height: 1.6;
+    /* Ajuste para melhorar a legibilidade */
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #1e1e3f, #0f0f1f);
+    
+}
+
+
+.minha-imagem {
+    width: 222px;
+    height: auto;
+    border-radius: 33px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    border: 2px solid #fff;
+
 }
 
 .gerar-imagem {
@@ -123,7 +254,7 @@ footer{
     justify-content: center;
 }
 
-.gerar-imagem form{
+.gerar-imagem form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +269,7 @@ footer{
     border-radius: 5px;
     padding: 10px;
     transition: all .3s ease-in-out;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 5rem;
     box-shadow: 0 4px 8px rgba(135, 102, 255, 0.3);
 }
@@ -164,7 +295,8 @@ footer{
     font-size: 1.8rem;
     margin: 20px;
 }
-.descreva{
+
+.descreva {
     margin-bottom: 4rem;
     font-size: 1.5rem;
 }
