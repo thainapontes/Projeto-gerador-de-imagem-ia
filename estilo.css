@@ -9,43 +9,77 @@ html,body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #29294e, #404058);
+    background: linear-gradient(135deg, #12123d, #404058);
 
 }
 
 h1,h2,h3,h4 {
-    text-align: center;
     color: #F0F0F0;
     font-family: 'Poppins', sans-serif;
-
+    text-align: center;
 }
 
 
 /*                                      HOMEPAGE                                   */
 
-.home {
-    flex: 1;
-    justify-content: center;
-    display: flex;
-    flex-direction: column; /* <- isso aqui é o que resolve */
-    align-items: center; /* centraliza na horizontal */
-    margin: 2rem;
-    gap: 1rem; /* espaço entre os textos */
-    padding: 0 2rem; /* para não grudar nas bordas */
-    text-align: center;
-    
-
+#body-index {
+    background: #fff url(imagens/imagem001.jpg) no-repeat center center/cover;
 }
 
 .home-background{
-    background-image: url('https://www.gruposelpe.com.br/wp-content/uploads/2021/02/gente-e-gestao-digital-o-futuro-ja-chegou.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex: 1;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: left;
+}
+
+.home {
+    height: 60%;
+    width: 50%;
+    display: flex;
     justify-content: center;
+    flex-direction: column; /* <- isso aqui é o que resolve */
+    text-align: left;
+    gap: 1rem; /* espaço entre os textos */
+    padding: 0 2rem; /* para não grudar nas bordas */
+    background-color: #1a233889;
+    border-radius: 0px 1rem 1rem 0px;
+}
+
+.home-background img {
+    width: 100%;
+    height: 100%;
+}
+
+.home a {
+    color: #fff;
+    background-color: #1a2338;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 150px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.home a:hover {
+    transform: scale(1.05);
+}
+
+.home h1 {
+    text-align: left;
+    background-color: #1a2338;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.home h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
 }
 
 /*                              CABEÇALHO                                  */
