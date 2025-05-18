@@ -35,7 +35,7 @@ h1,h2,h3,h4 {
 }
 
 .home {
-    height: 60%;
+    height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ h1,h2,h3,h4 {
 }
 
 .botao:hover {
-    background-color: #251041;
+    background-color: #070c38;
     /* Tom mais escuro ao passar o mouse */
     transform: scale(1.05);
 }
@@ -158,7 +158,7 @@ footer {
 }
 
 .contato h3{
-    margin: 2rem;
+    margin: 1rem;
     
 }
 .contato h2{
@@ -183,8 +183,6 @@ footer {
   
 
 }
-   
-   
 
 .contato  form button {
     background-color: rgb(255, 255, 255);
@@ -200,6 +198,37 @@ footer {
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.social{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;   /* centraliza horizontalmente */
+    gap: 3rem;                 /* espaço entre cada ícone/link */
+    flex-wrap: wrap;           /* quebra se a tela for muito estreita */
+}
+
+.social a{
+    display: flex;
+    align-items: center;       /* ícone e texto na mesma linha */
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;               /* ou a cor que preferir */
+    transition: transform .2s;
+}
+
+.social i{
+    font-size: 1.8rem;
+    margin-right: .5rem;
+}
+
+.social a:hover{
+    transform: scale(1.08);    /* leve zoom no hover */
+}
+
+   
+   
+
 
 
 
@@ -223,63 +252,6 @@ footer {
     font-family: 'Poppins', sans-serif;
     padding: 20px;
     text-align: center;
-}
-
-
-
-/*                                    SOBRE NOS                                  */
-
-
-
-
-.sobrenos {
-    text-align: center;
-    flex: 1;
-    margin: 2rem;
-    
-}
-
-.quemsomos{
-    margin-bottom: 3rem;
-    letter-spacing: 1px;
-    
-
-}
-.quemsomos h1{
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    letter-spacing: 0.7rem;
-}
-
-.perfil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    gap: 20px;
-    /* Espaço entre a imagem e o texto */
-    margin-top: 20px;
-    font-size: 16px;
-    /* Ajusta o tamanho do texto */
-    max-width: 80%;
-    /* Limita a largura do texto para não esticar demais */
-    line-height: 1.6;
-    /* Ajuste para melhorar a legibilidade */
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    background: linear-gradient(135deg, #1e1e3f, #0f0f1f);
-    
-}
-
-
-.minha-imagem {
-    width: 222px;
-    height: auto;
-    border-radius: 33px;
-    padding: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    border: 2px solid #fff;
-
 }
 
 .gerar-imagem {
@@ -331,6 +303,50 @@ footer {
 }
 
 .descreva {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     font-size: 1.5rem;
+}
+
+
+/*                                    SOBRE NOS                                  */
+
+
+/* contêiner que divide a tela */
+.sobrenos article{
+  display:flex;           
+  height:76.9vh;   /* ocupa só a altura da janela */
+  overflow:hidden;  
+}
+
+/* coluna de texto */
+.quemsomos{
+  flex:1;                 /* ocupa 50 % da largura */
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center; /* centraliza verticalmente o texto */
+}
+
+/* coluna de imagem */
+.perfil{
+  flex:1;                 /* outros 50 % */
+  position:relative;
+  overflow:hidden;
+}
+
+/* imagem cobre toda a coluna, acompanhando a altura que surgir */
+.minha-imagem{
+  width:100%;
+  height:100%;
+  object-fit:cover;       /* preenche sem distorcer */
+}
+
+/* responsivo: empilha em telas estreitas */
+@media (max-width:768px){
+  .sobrenos article{
+    flex-direction:column;
+  }
+  .minha-imagem{
+    height:auto;          /* para não esticar no mobile */
+  }
 }
